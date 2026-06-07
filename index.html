@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeFlow | Visual Development Platform</title>
+    <title>MandarinFlow | Learn Chinese, Unlock the Future</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,15 +14,15 @@
         }
         
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Noto Sans SC', 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9fbfd;
+            color: #1d3557; /* 墨竹深蓝 */
+            background-color: #f8f9fa;
         }
         
         h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
+            font-family: 'Poppins', 'Noto Sans SC', sans-serif;
+            font-weight: 700;
             line-height: 1.3;
         }
         
@@ -33,10 +33,10 @@
             padding: 0 20px;
         }
         
-        /* Header & Navigation */
+        /* 1. 顶部导航栏 - 融合国潮红 */
         header {
             background-color: #fff;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 15px rgba(230, 57, 70, 0.08);
             position: fixed;
             width: 100%;
             z-index: 1000;
@@ -46,7 +46,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
@@ -55,20 +55,19 @@
         }
         
         .logo-icon {
-            color: #4361ee;
+            color: #e63946; /* 国潮红 */
             font-size: 28px;
             margin-right: 10px;
         }
         
         .logo-text {
-            font-family: 'Poppins', sans-serif;
             font-size: 24px;
             font-weight: 700;
-            color: #333;
+            color: #1d3557;
         }
         
         .logo-text span {
-            color: #4361ee;
+            color: #e63946;
         }
         
         .nav-links {
@@ -82,29 +81,31 @@
         
         .nav-links a {
             text-decoration: none;
-            color: #555;
+            color: #457b9d;
             font-weight: 500;
             transition: color 0.3s;
         }
         
         .nav-links a:hover {
-            color: #4361ee;
+            color: #e63946;
         }
         
         .cta-button {
-            background-color: #4361ee;
+            background-color: #e63946;
             color: white;
             border: none;
             padding: 12px 28px;
-            border-radius: 6px;
+            border-radius: 50px; /* 更加圆润现代化 */
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
         }
         
         .cta-button:hover {
-            background-color: #3a56d4;
+            background-color: #b71c1c;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
         }
         
         .mobile-menu-btn {
@@ -112,20 +113,36 @@
             background: none;
             border: none;
             font-size: 24px;
-            color: #333;
+            color: #1d3557;
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* 2. 首屏展示区 - 鲜明活力渐变 */
         .hero {
-            padding: 150px 0 100px;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f9fbfd 100%);
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #ffeedd 0%, #fff5f5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 装饰背景元素 */
+        .hero::before {
+            content: "汉";
+            position: absolute;
+            right: -5%;
+            bottom: -5%;
+            font-size: 30rem;
+            color: rgba(230, 57, 70, 0.03);
+            font-weight: 900;
+            z-index: 1;
         }
         
         .hero-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-text {
@@ -134,19 +151,20 @@
         }
         
         .hero-text h1 {
-            font-size: 48px;
+            font-size: 46px;
             margin-bottom: 20px;
-            color: #222;
+            color: #1d3557;
         }
         
         .hero-text h1 span {
-            color: #4361ee;
+            color: #e63946;
+            border-bottom: 3px solid #ffb703; /* 金黄下划线线 */
         }
         
         .hero-text p {
             font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
+            color: #457b9d;
+            margin-bottom: 35px;
             max-width: 600px;
         }
         
@@ -157,17 +175,17 @@
         
         .secondary-button {
             background-color: white;
-            color: #4361ee;
-            border: 2px solid #4361ee;
+            color: #e63946;
+            border: 2px solid #e63946;
             padding: 12px 28px;
-            border-radius: 6px;
+            border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
         }
         
         .secondary-button:hover {
-            background-color: #f0f4ff;
+            background-color: #fff5f5;
         }
         
         .hero-image {
@@ -177,11 +195,12 @@
         
         .hero-image img {
             max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(230, 57, 70, 0.15);
+            border: 4px solid white;
         }
         
-        /* Features Section */
+        /* 3. 办学特色区 - 浮动阴影卡片 */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -189,14 +208,27 @@
         
         .section-title h2 {
             font-size: 36px;
-            color: #222;
+            color: #1d3557;
             margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: "";
+            width: 60%;
+            height: 4px;
+            background-color: #ffb703;
+            position: absolute;
+            bottom: -8px;
+            left: 20%;
+            border-radius: 2px;
         }
         
         .section-title p {
-            color: #666;
+            color: #457b9d;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 15px auto 0;
         }
         
         .features {
@@ -212,244 +244,196 @@
         
         .feature-card {
             background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(29, 53, 87, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 3px solid transparent;
         }
         
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.12);
+            border-bottom: 3px solid #e63946;
         }
         
         .feature-icon {
-            background-color: #eef2ff;
-            color: #4361ee;
+            background-color: #fff3f3;
+            color: #e63946;
             width: 70px;
             height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 28px;
+        }
+
+        /* 给第二个和第三个图标换个颜色，增加色彩鲜明度 */
+        .features-grid .feature-card:nth-child(2) .feature-icon {
+            background-color: #fff9e6;
+            color: #ffb703;
+        }
+        .features-grid .feature-card:nth-child(3) .feature-icon {
+            background-color: #e6f7ff;
+            color: #457b9d;
         }
         
         .feature-card h3 {
             font-size: 22px;
             margin-bottom: 15px;
+            color: #1d3557;
         }
         
         .feature-card p {
-            color: #666;
+            color: #556b83;
+            font-size: 15px;
         }
         
-        /* Benefits Section */
-        .benefits {
-            padding: 100px 0;
-            background-color: #f0f4ff;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .benefit-item {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .benefit-icon {
-            color: #4361ee;
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        
-        .benefit-item h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        .benefit-item p {
-            color: #666;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial {
-            background: #f9fbfd;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: #555;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #4361ee;
-            font-size: 24px;
-        }
-        
-        .author-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            color: #777;
-            font-size: 14px;
-        }
-        
-        /* Pricing Section */
+        /* 4. 核心课程体系 - 精美价格/课程卡片 */
         .pricing {
             padding: 100px 0;
-            background-color: #f9fbfd;
+            background-color: #f1faee; /* 极淡的清新绿底色 */
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            align-items: center;
         }
         
         .pricing-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
             text-align: center;
             transition: transform 0.3s;
+            position: relative;
         }
         
+        /* 王牌推荐课程高亮 */
         .pricing-card.featured {
-            border-top: 5px solid #4361ee;
+            border: 3px solid #e63946;
             transform: scale(1.05);
-            position: relative;
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.15);
         }
         
         .featured-badge {
             position: absolute;
-            top: -12px;
+            top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #4361ee;
+            background: linear-gradient(90deg, #ffb703, #e63946);
             color: white;
-            padding: 5px 20px;
+            padding: 6px 25px;
             border-radius: 20px;
             font-size: 14px;
             font-weight: 600;
+            letter-spacing: 1px;
         }
         
         .pricing-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
         
         .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
+            transform: scale(1.05) translateY(-5px);
         }
         
         .plan-name {
             font-size: 24px;
-            margin-bottom: 15px;
-            color: #333;
+            margin-bottom: 10px;
+            color: #1d3557;
+        }
+
+        .plan-desc {
+            font-size: 14px;
+            color: #778da9;
+            margin-bottom: 20px;
         }
         
         .plan-price {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
-            color: #4361ee;
-            margin-bottom: 20px;
+            color: #e63946;
+            margin-bottom: 25px;
         }
         
         .plan-price span {
             font-size: 16px;
-            color: #777;
+            color: #457b9d;
         }
         
         .plan-features {
             list-style: none;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            text-align: left;
+            padding-left: 15px;
         }
         
         .plan-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            color: #555;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e8ecef;
+            color: #457b9d;
+            font-size: 15px;
+        }
+
+        .plan-features li i {
+            color: #e63946;
+            margin-right: 10px;
         }
         
         .plan-features li:last-child {
             border-bottom: none;
         }
+
+        .pricing-card button {
+            width: 100%;
+        }
         
-        /* CTA Section */
+        /* 5. 激发行动Banner */
         .cta-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
+            background: linear-gradient(135deg, #e63946 0%, #1d3557 100%);
             text-align: center;
             color: white;
+            position: relative;
         }
         
         .cta-section h2 {
-            font-size: 36px;
+            font-size: 38px;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         
         .cta-section p {
             font-size: 18px;
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto 35px;
             opacity: 0.9;
         }
         
         .cta-section .cta-button {
-            background-color: white;
-            color: #4361ee;
-            font-size: 16px;
-            padding: 15px 40px;
+            background-color: #ffb703; /* 醒目的金黄按钮 */
+            color: #1d3557;
+            font-size: 17px;
+            padding: 15px 45px;
+            box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
         }
         
         .cta-section .cta-button:hover {
-            background-color: #f0f4ff;
+            background-color: white;
+            color: #e63946;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
         }
         
-        /* Footer */
+        /* 6. 页脚区 */
         footer {
-            background-color: #222;
-            color: #ccc;
+            background-color: #1d3557;
+            color: #a8dadc;
             padding: 70px 0 20px;
         }
         
@@ -461,9 +445,20 @@
         }
         
         .footer-column h3 {
-            font-size: 20px;
+            font-size: 18px;
             color: white;
             margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-column h3::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #e63946;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
         }
         
         .footer-links {
@@ -475,24 +470,26 @@
         }
         
         .footer-links a {
-            color: #aaa;
+            color: #a8dadc;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 15px;
         }
         
         .footer-links a:hover {
-            color: #4361ee;
+            color: #ffb703;
         }
         
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid #444;
+            border-top: 1px solid rgba(168, 218, 220, 0.2);
             font-size: 14px;
-            color: #888;
+            color: #f1faee;
+            opacity: 0.7;
         }
         
-        /* Responsive Design */
+        /* 7. 响应式布局优化 */
         @media (max-width: 992px) {
             .hero-content {
                 flex-direction: column;
@@ -513,7 +510,11 @@
             }
             
             .pricing-card.featured:hover {
-                transform: translateY(-10px);
+                transform: translateY(-5px);
+            }
+            
+            .hero-buttons {
+                justify-content: center;
             }
         }
         
@@ -527,439 +528,211 @@
             }
             
             .hero-text h1 {
-                font-size: 36px;
+                font-size: 34px;
             }
             
             .section-title h2 {
-                font-size: 30px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero-buttons button {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero {
-                padding: 130px 0 80px;
-            }
-            
-            .features, .benefits, .testimonials, .pricing, .cta-section {
-                padding: 70px 0;
-            }
-            
-            .feature-card, .testimonial {
-                padding: 25px;
-            }
-            
-            .plan-price {
-                font-size: 36px;
+                font-size: 28px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <div class="logo-icon"><i class="fas fa-bezier-curve"></i></div>
-                    <div class="logo-text">Code<span>Flow</span></div>
+                    <div class="logo-icon"><i class="fas fa-gavel"></i></div> <div class="logo-text">Mandarin<span>Flow</span></div>
                 </div>
                 
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 
-                <button class="cta-button">Start Free Trial</button>
+                <button class="cta-button" onclick="alert('Welcome! Redirecting to application form...')">Apply Now</button>
                 <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Build Apps Faster With <span>Visual Development</span></h1>
-                    <p>CodeFlow empowers teams to create enterprise-grade applications with minimal coding. Drag, drop, and connect components to build powerful web and mobile apps in record time.</p>
+                    <h1>Learn Chinese, Unlock Your <span>Global Future</span></h1>
+                    <p>Immerse yourself in professional Chinese language training. From zero basics to HSK mastery, we bridge your career and cultural journey with professional native instructors.</p>
                     <div class="hero-buttons">
-                        <button class="cta-button">Start Building Free</button>
-                        <button class="secondary-button">Watch Demo</button>
+                        <button class="cta-button" onclick="alert('Booked! We will mail you the details.')">Free Trial Lesson</button>
+                        <button class="secondary-button" onclick="alert('Loading video preview...')">Explore Culture</button>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CodeFlow Platform Interface">
+                    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Learn Chinese Cultural Immersion">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-title">
-                <h2>Powerful Features for Rapid Development</h2>
-                <p>CodeFlow provides all the tools you need to build, deploy, and scale applications without writing extensive code.</p>
+                <h2>Why Study With Us?</h2>
+                <p>We combine immersive communication methods with structured milestones to ensure efficient results.</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-th-large"></i>
-                    </div>
-                    <h3>Visual Builder</h3>
-                    <p>Drag and drop UI components to design responsive interfaces. Connect data sources with simple point-and-click actions.</p>
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Certified Native Tutors</h3>
+                    <p>All teachers hold Master's degrees in TCSOL (Teaching Chinese to Speakers of Other Languages) with 5+ years of global experience.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database Integration</h3>
-                    <p>Connect to any data source with built-in connectors. Automatically generate CRUD operations without writing SQL.</p>
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Immersive Method</h3>
+                    <p>Say goodbye to boring rote learning. Learn through practical, situational communication and real-life Chinese culture projects.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Cross-Platform</h3>
-                    <p>Build once, deploy everywhere. Generate applications for web, iOS, and Android from a single visual design.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Extensible with Code</h3>
-                    <p>Add custom functionality with JavaScript when needed. Our platform doesn't limit your creativity or complexity.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Enterprise Security</h3>
-                    <p>Built-in authentication, authorization, and data encryption. SOC2 compliant with enterprise-grade security features.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>One-Click Deployment</h3>
-                    <p>Deploy to cloud or on-premises with a single click. Automatic scaling and monitoring included.</p>
+                    <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Tailor your learning pace. We offer 24/7 online classes and intensive on-campus modules fitting your personal lifestyle.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits" id="benefits">
+    <section class="pricing" id="courses">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose CodeFlow?</h2>
-                <p>Join thousands of companies accelerating their digital transformation with low-code development.</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>10x Faster Development</h3>
-                    <p>Build applications in days instead of months with visual development tools.</p>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>Reduce Costs by 70%</h3>
-                    <p>Lower development and maintenance costs with fewer resources required.</p>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Citizen Developers</h3>
-                    <p>Enable business users to build solutions with minimal IT assistance.</p>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Scale Effortlessly</h3>
-                    <p>From prototype to enterprise-scale applications with the same platform.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Trusted by Industry Leaders</h2>
-                <p>See what our customers have to say about their experience with CodeFlow.</p>
-            </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-text">
-                        "CodeFlow transformed how we deliver solutions to our business units. What used to take 6 months now takes 3 weeks. Our development team can focus on complex problems while business teams build their own solutions."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SC</div>
-                        <div class="author-info">
-                            <h4>Sarah Chen</h4>
-                            <p>CTO, TechGrowth Inc.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Simple, Transparent Pricing</h2>
-                <p>Choose the plan that fits your needs. All plans include core features with no hidden fees.</p>
+                <h2>Our Premium Programs</h2>
+                <p>Select the ideal roadmap tailored to your specific personal, academic, or professional career objectives.</p>
             </div>
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3 class="plan-name">Starter</h3>
-                    <div class="plan-price">$29<span>/month</span></div>
+                    <h3 class="plan-name">Survival Mandarin</h3>
+                    <p class="plan-desc">Best for travelers and absolute beginners.</p>
+                    <div class="plan-price">$199<span>/ Level</span></div>
                     <ul class="plan-features">
-                        <li>Up to 5 users</li>
-                        <li>10 GB storage</li>
-                        <li>Basic components</li>
-                        <li>Community support</li>
-                        <li>1 production app</li>
+                        <li><i class="fas fa-check"></i> Pinyin & Tone foundations</li>
+                        <li><i class="fas fa-check"></i> 500+ Essential vocabulary</li>
+                        <li><i class="fas fa-check"></i> 20+ Daily conversational tasks</li>
+                        <li><i class="fas fa-check"></i> Group culture workshops</li>
                     </ul>
-                    <button class="secondary-button">Get Started</button>
+                    <button class="secondary-button" onclick="alert('Enrolled in Survival Mandarin!')">Learn More</button>
                 </div>
                 
                 <div class="pricing-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <h3 class="plan-name">Professional</h3>
-                    <div class="plan-price">$89<span>/month</span></div>
+                    <div class="featured-badge">MOST POPULAR</div>
+                    <h3 class="plan-name">HSK Success Masterclass</h3>
+                    <p class="plan-desc">Comprehensive training from HSK 1 to HSK 6.</p>
+                    <div class="plan-price">$399<span>/ Level</span></div>
                     <ul class="plan-features">
-                        <li>Up to 25 users</li>
-                        <li>100 GB storage</li>
-                        <li>All components</li>
-                        <li>Priority support</li>
-                        <li>10 production apps</li>
-                        <li>Custom branding</li>
+                        <li><i class="fas fa-check"></i> Official standard curriculum</li>
+                        <li><i class="fas fa-check"></i> Weekly 1-on-1 speaking evaluation</li>
+                        <li><i class="fas fa-check"></i> Mock exams & individualized feedback</li>
+                        <li><i class="fas fa-check"></i> Guaranteed certification passing</li>
                     </ul>
-                    <button class="cta-button">Try Free for 14 Days</button>
+                    <button class="cta-button" onclick="alert('Welcome to HSK Bootcamp! 14 days refund guarantee activated.')">Join Bootcamp</button>
                 </div>
                 
                 <div class="pricing-card">
-                    <h3 class="plan-name">Enterprise</h3>
-                    <div class="plan-price">Custom</div>
+                    <h3 class="plan-name">Business Chinese</h3>
+                    <p class="plan-desc">For professionals seeking career growth.</p>
+                    <div class="plan-price">$549<span>/ Course</span></div>
                     <ul class="plan-features">
-                        <li>Unlimited users</li>
-                        <li>Unlimited storage</li>
-                        <li>All features included</li>
-                        <li>24/7 dedicated support</li>
-                        <li>Unlimited apps</li>
-                        <li>On-premises option</li>
+                        <li><i class="fas fa-check"></i> Corporate communication etiquette</li>
+                        <li><i class="fas fa-check"></i> Negotiation & Presentation skills</li>
+                        <li><i class="fas fa-check"></i> Industry-specific terminology</li>
+                        <li><i class="fas fa-check"></i> Networking mentorship events</li>
                     </ul>
-                    <button class="secondary-button">Contact Sales</button>
+                    <button class="secondary-button" onclick="alert('Connecting with our Business Program Advisor...')">Contact Consultant</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Start Building Today</h2>
-            <p>Join over 10,000 companies that use CodeFlow to accelerate their application development. No credit card required for the free trial.</p>
-            <button class="cta-button">Get Started for Free</button>
+            <h2>Ready to Speak Chinese Fluently?</h2>
+            <p>Join over 5,000 global students accelerating their language mastery today. Get a free language proficiency assessment session upon registration.</p>
+            <button class="cta-button" onclick="alert('Great choice! Check your inbox for the placement test link.')">Claim Your Free Lesson</button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="logo">
-                        <div class="logo-icon"><i class="fas fa-bezier-curve"></i></div>
-                        <div class="logo-text">Code<span>Flow</span></div>
+                        <div class="logo-text" style="color: white;">Mandarin<span>Flow</span></div>
                     </div>
-                    <p style="margin-top: 20px; color: #aaa;">The leading visual development platform for building enterprise applications with minimal coding.</p>
+                    <p style="margin-top: 20px; color: #a8dadc; font-size: 14px;">The elite international center for Chinese linguistic excellence and professional cultural immersion solutions.</p>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Product</h3>
+                    <h3>Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Use Cases</a></li>
-                        <li><a href="#">Integrations</a></li>
-                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Adult Courses</a></li>
+                        <li><a href="#">Kids Mandarin</a></li>
+                        <li><a href="#">HSK Preparation</a></li>
+                        <li><a href="#">Summer Camp 2026</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Free Pinyin Chart</a></li>
+                        <li><a href="#">Grammar Guides</a></li>
+                        <li><a href="#">HSK Mock Tests</a></li>
+                        <li><a href="#">Student Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links" style="color: #a8dadc; font-size: 14px;">
+                        <li style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: #ffb703; margin-right: 8px;"></i> admissions@mandarinflow.com</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-phone" style="color: #ffb703; margin-right: 8px;"></i> +86 (21) 5432-xxxx</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: #ffb703; margin-right: 8px;"></i> Shanghai, China</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 CodeFlow. All rights reserved.</p>
+                <p>&copy; 2026 MandarinFlow Institute. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // 移动端汉堡菜单控制逻辑（已重构：使用更科学的 classList 切换，避免响应式失效）
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            
-            // Adjust for mobile
-            if (window.innerWidth <= 768) {
-                if (navLinks.style.display === 'flex') {
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '80px';
-                    navLinks.style.left = '0';
-                    navLinks.style.width = '100%';
-                    navLinks.style.backgroundColor = 'white';
-                    navLinks.style.padding = '20px';
-                    navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                    
-                    const navItems = document.querySelectorAll('.nav-links li');
-                    navItems.forEach(item => {
-                        item.style.margin = '10px 0';
-                    });
-                }
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.padding = '20px';
+                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
                 
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if(window.innerWidth <= 768) {
-                        document.querySelector('.nav-links').style.display = 'none';
-                    }
-                }
-            });
-        });
-        
-        // Simple testimonial slider
-        const testimonials = [
-            {
-                text: "CodeFlow transformed how we deliver solutions to our business units. What used to take 6 months now takes 3 weeks. Our development team can focus on complex problems while business teams build their own solutions.",
-                name: "Sarah Chen",
-                position: "CTO, TechGrowth Inc.",
-                initials: "SC"
-            },
-            {
-                text: "We reduced our app development time by 80% using CodeFlow. The visual interface made it easy for our analysts to build data dashboards without waiting for IT resources.",
-                name: "Marcus Johnson",
-                position: "Director of Operations, DataCorp",
-                initials: "MJ"
-            },
-            {
-                text: "As a non-technical founder, CodeFlow allowed me to build our MVP in just 2 months. I could test ideas quickly and iterate based on user feedback without deep coding knowledge.",
-                name: "Lisa Wang",
-                position: "Founder, StartupLabs",
-                initials: "LW"
+                document.querySelectorAll('.nav-links li').forEach(item => {
+                    item.style.margin = '10px 0';
+                    item.style.marginLeft = '0';
+                });
             }
-        ];
-        
-        let currentTestimonial = 0;
-        const testimonialElement = document.querySelector('.testimonial');
-        
-        function rotateTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial();
-        }
-        
-        function updateTestimonial() {
-            const testimonial = testimonials[currentTestimonial];
-            testimonialElement.innerHTML = `
-                <div class="testimonial-text">"${testimonial.text}"</div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">${testimonial.initials}</div>
-                    <div class="author-info">
-                        <h4>${testimonial.name}</h4>
-                        <p>${testimonial.position}</p>
-                    </div>
-                </div>
-            `;
-        }
-        
-        // Auto-rotate testimonials every 5 seconds
-        setInterval(rotateTestimonial, 5000);
-        
-        // CTA button interactions
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Thank you for your interest in CodeFlow! You would be redirected to the signup page in a real implementation.');
-            });
-        });
-        
-        // Pricing card interactions
-        document.querySelectorAll('.pricing-card button').forEach(button => {
-            button.addEventListener('click', function() {
-                const planName = this.closest('.pricing-card').querySelector('.plan-name').textContent;
-                alert(`You selected the ${planName} plan. In a real implementation, you would be redirected to the checkout process.`);
-            });
         });
     </script>
 </body>
